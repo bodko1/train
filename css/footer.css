@@ -1,0 +1,119 @@
+.footer{
+  background: #EEE;
+  padding-top: 80px;
+}
+.footer__container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.footer__container-first{
+  display: flex;
+ flex-direction: column;
+}
+.footer__logo{
+  margin-bottom: 28px;
+}
+.footer__logo-text{
+  font-size: 40px;
+}
+.footer__container-first-mail{
+  color: var(--color_dark);
+  line-height: 160%;
+}
+.footer__container-first-mail::before{
+  content:"";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/images/sms.svg");
+  color: #666666;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 24px;
+}
+
+.footer__container-first-location{
+  color: var(--color_dark);
+  font-size: 16px;
+  line-height: 160%; /* 25.6px */
+  margin-top: 20px;
+  margin-bottom: 16px;
+
+}
+.footer__container-first-location::before {
+  content:"";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("/images/location.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 24px;
+}
+
+.footer__container-second-head {
+  color: var(--color_black);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer__container-second-text{
+  color: rgba(18, 18, 18, 0.60);
+  margin-bottom: 16px;
+}
+.footer__container-third-head{
+  color: var(--color_black);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer__container-third-text{
+  color: rgba(18, 18, 18, 0.60);
+  margin-bottom: 16px;
+}
+.footer__container-fourth-head{
+  color: var(--color_black);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.footer__container-fourth-logo{
+  display: flex;
+  gap: 32px;
+}
+.footer__container-copy{
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  color: rgba(18, 18, 18, 0.60);
+  line-height: 160%;
+  padding-bottom: 45px;
+}
+
+
+/*adaptvi*/
+@media (max-width: 768px) {
+  .footer__container{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__container-first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  .footer__container-copy {
+    margin-top: 50px;
+  }
+  }

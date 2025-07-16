@@ -1,0 +1,273 @@
+/*header*/
+.header{
+  padding-top: 64px;
+}
+
+
+
+
+.header_container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header__nav{
+  display: flex;
+  justify-content: start;
+  gap: 130px;
+  align-items: center;
+
+}
+
+/*logo*/
+.logo{
+  display:flex;
+  justify-content: start;
+  gap: 12px;
+}
+
+.logo_text{
+  color: var(--color_black);
+  font-family: var(--title_font);
+  font-size: 24px;
+  font-weight: 600;
+}
+/*nav*/
+.header__nav-list{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.header__nav-item{
+  color: rgba(18, 18, 18, 0.40);
+  font-weight: 500;
+}
+.header__decore-image{
+  width: 40vw;          /* 50% ширини вікна */
+  max-width: 672px;
+  height: auto;         /* висота підлаштовується */
+  aspect-ratio: 672 / 586;
+  flex-shrink: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 151px 360px;
+  background-color: lightgray;
+  background-image: url("/images/guitar.jpg"), linear-gradient(180deg, #FF8C60 0%, #FF5B1C 100%);
+  background-position:  0 -398px ,center;
+  background-repeat:  no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(20px);
+}
+.header__decore-image::after{
+  content: "";
+  position: absolute;
+  background-image: url("/images/underguitar.svg");
+  width: 80px;
+  height: 80px;
+  top: 93%;
+  right: 33%;
+}
+.burger{
+  display: none;
+}
+.header__main{
+  display: flex;
+  flex-direction: column;
+  margin-top: 144px;
+  max-width: 570px;
+}
+.header__main-title{
+  color: #121212;
+  font-family: var(--title_font);
+  font-size: 56px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.header__main-span{
+  color:#FF6428;
+  font-family: var(--title_font);
+  font-size: 56px;
+  font-weight: 600;
+}
+.header__main-subtitle{
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.header__main-list{
+  display: flex;
+  justify-content: start;
+  gap: 40px;
+  align-items: center;
+}
+.header__item-button{
+  padding: 18px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  background: #FF6428;
+  border: none;
+  color: #FFF;
+  font-weight: 600;
+
+}
+.header__item_logos{
+  width: 88px;
+  height: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*adaptiv*/
+
+@media (max-width: 1600px) {
+  .header__decore-image {
+    background-position:  0 -350px ,center;
+
+  }
+}
+
+@media (max-width: 1400px) {
+  /*.logo{*/
+  /*  padding: 0 20px;*/
+  /*}*/
+
+  .header_container{
+    padding: 0 20px;
+  }
+
+  .header__decore-image {
+    background-position:  0 -300px ,center;
+
+  }
+  .header__decore-image::after {
+    top: 91%;
+    right: 30%;
+
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__decore-image {
+    background-position:  0 -180px ,center;
+    width: 30vw;
+    height: auto;
+  }
+  .header__decore-image::after {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    top: 87%;
+    right: 29%;
+
+  }
+
+}
+
+
+
+
+
+@media (max-width: 992px) {
+  .header__decore-image {
+    width: 25vw;          /* 50% ширини вікна */
+    background-position:  0 -90px ,center;
+  }
+  .header__decore-image::after {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    top: 81%;
+    right: 26%;
+
+  }
+  .header{
+    padding-top: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__decore-image {
+    display: none;
+  }
+  .logo{
+    align-items: center;
+    gap: 8px;
+  }
+  .logo_text{
+    font-size: 18px;
+  }
+  .header__nav{
+    justify-content: space-between;
+  }
+  .header__nav-list{
+    padding: 0 15px;
+  }
+  .header__main{
+    margin: 0 auto;
+    margin-top: 72px;
+    text-align: center;
+    max-width: 500px;
+  }
+  .header__main-list{
+    margin: 0 auto;
+  }
+
+
+
+}
+@media (max-width: 576px) {
+  .header__nav-list{
+    display: none;
+  }
+  .burger{
+    display: flex;
+    padding: 0 20px;
+    width: 50px;
+    height: 40px;
+    align-items: center;
+    background-image: url("/images/burger.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: transparent;
+  }
+  .header__main-title{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .header__main-span{
+    font-size: 50px;
+  }
+  .header__main-subtitle{
+    margin-bottom: 24px;
+  }
+  .header__main-list{
+    gap: 20px;
+  }
+  .header__item-button{
+    padding: 14px 36px;
+  }
+  .header__item-logos{
+    width: 68px;
+    height: 24px;
+  }
+}
